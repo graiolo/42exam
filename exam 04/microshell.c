@@ -6,7 +6,7 @@
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 1970/01/01 00:00:00 by exam              #+#    #+#             */
-/*   Updated: 2023/07/01 22:46:01 by exam             ###   ########.fr       */
+/*   Updated: 1970/01/01 19:44:11 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	exec(char **argv, char **envp, int i)
 	int	flag_pipe;
 
 	flag_pipe = 0;
-	if (!strcmp(argv[i], "|"))
+	if (argv[i] && !strcmp(argv[i], "|"))
 		flag_pipe = 1;
 	if (*argv && (!strcmp(*argv, "|") || !strcmp(*argv, ";")))
 		return (0);
